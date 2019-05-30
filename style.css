@@ -379,7 +379,7 @@ big {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #929292;
+	color: #585858;
 }
 /*--------------------------------------------------------------
 # Elements
@@ -856,7 +856,7 @@ a:active {
 }
 
 .entry-footer {
-	color: #aaa;
+	color: #585858;
 	font-size: 90%;
 	padding-bottom: 40px;
 	border-bottom: 1px solid #111;
