@@ -1,4 +1,4 @@
-=== gutenbergtheme ===
+=== rarelyneeded ===
 
 Contributors: everyone welcome
 Tags: translation-ready
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-gutenbergtheme includes support for Infinite Scroll in Jetpack.
+rarelyneeded includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
