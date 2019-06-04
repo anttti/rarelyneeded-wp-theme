@@ -163,7 +163,7 @@ function rarelyneeded_fonts_url() {
 function rarelyneeded_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'rarelyneededblocks-style', get_template_directory_uri() . '/css/blocks.css' );
+	// wp_enqueue_style( 'rarelyneededblocks-style', get_template_directory_uri() . '/css/blocks.css' );
 
 	wp_enqueue_style( 'rarelyneeded-fonts', rarelyneeded_fonts_url() );
 
