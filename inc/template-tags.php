@@ -35,45 +35,19 @@ if ( ! function_exists( 'rarelyneeded_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'rarelyneeded_entry_footer' ) ) :
+if ( ! function_exists( 'rarelyneeded_entry_categories' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function rarelyneeded_entry_footer() {
+	function rarelyneeded_entry_categories() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'rarelyneeded' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'rarelyneeded' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( ' - <span class="cat-links">%1$s</span>', $categories_list ); // WPCS: XSS OK.
 			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'rarelyneeded' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'rarelyneeded' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
-		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'rarelyneeded' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
 		}
 
 		edit_post_link(

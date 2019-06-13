@@ -15,13 +15,6 @@
  * See: https://jetpack.com/support/content-options/
  */
 function rarelyneeded_jetpack_setup() {
-	// Add theme support for Infinite Scroll.
-	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'rarelyneeded_infinite_scroll_render',
-		'footer'    => 'page',
-	) );
-
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
@@ -33,22 +26,7 @@ function rarelyneeded_jetpack_setup() {
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
 			'author'     => '.byline',
-			'comment'    => '.comments-link',
 		),
 	) );
 }
 add_action( 'after_setup_theme', 'rarelyneeded_jetpack_setup' );
-
-/**
- * Custom render function for Infinite Scroll.
- */
-function rarelyneeded_infinite_scroll_render() {
-	while ( have_posts() ) {
-		the_post();
-		if ( is_search() ) :
-			get_template_part( 'template-parts/content', 'search' );
-		else :
-			get_template_part( 'template-parts/content', get_post_format() );
-		endif;
-	}
-}
