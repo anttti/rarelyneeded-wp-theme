@@ -51,9 +51,11 @@ a:active {
 		justify-content: center;
 		align-items: center;
 		height: 80px;
+		padding: 10px;
+		background: var(--color-yellow-200);
 		text-decoration: none;
-		background: var(--color-bg-light);
 		text-transform: uppercase;
+		text-align: center;
 		font-weight: bold;
 		font-size: 12px;
 		letter-spacing: 1px;
@@ -61,7 +63,18 @@ a:active {
 		color: var(--color-text);
 
 		&:hover {
-			background: var(--color-bg-dark);
+			color: white;
+			background: var(--color-pink);
 		}
 	}
+}
+
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+	border-radius: 40px 0 0 40px;
+}
+
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+	border-radius: 0 40px 40px 0;
 }
