@@ -33,16 +33,6 @@ h6 {
 	text-align: center;
 }
 
-.entry-title a {
-	color: var(--color-heading);
-	text-decoration: none;
-
-	&:hover {
-		color: var(--color-heading);
-		text-decoration: underline;
-	}
-}
-
 .entry-meta {
 	text-align: center;
 	text-transform: uppercase;
@@ -50,9 +40,16 @@ h6 {
 	font-size: 12px;
 	letter-spacing: 1px;
 
-	a {
+	a,
+	a:visited {
 		color: var(--color-text-light);
-		text-decoration: none;
+	}
+
+	a:hover,
+	a:focus,
+	a:active {
+		color: var(--color-pink);
+		background: transparent;
 	}
 }
 

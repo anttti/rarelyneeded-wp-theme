@@ -6,11 +6,6 @@
 	max-width: 100%;
 }
 
-.site-branding {
-	text-align: center;
-	margin: 60px 0;
-}
-
 .site-footer {
 	padding: 30px;
 	background: var(--color-bg-light);
@@ -62,8 +57,8 @@
 .entry-content > * {
 	margin: 20px auto;
 	max-width: var(--content-width);
-	padding-left: 14px;
-	padding-right: 14px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .entry-content > .alignwide {

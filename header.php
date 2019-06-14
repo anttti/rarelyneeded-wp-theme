@@ -15,39 +15,31 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700&display=swap" rel="stylesheet">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'rarelyneeded' ); ?></a>
-		<header id="masthead" class="site-header">
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-				endif;
+	<a class="skip-link screen-reader-text" href="#primary">
+		<?php esc_html_e( 'Skip to content', 'rarelyneeded' ); ?>
+	</a>
 
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
-				endif; ?>
-			</div><!-- .site-branding -->
+	<header class="site-header__container">
+		<div class="site-header">
+			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<svg viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="56" cy="56" r="56" fill="#EF456E"/>
+					<circle cx="35.5888" cy="32.4486" r="13.6075" fill="white"/>
+				</svg>
+			</a>
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rarelyneeded' ); ?></button>
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
 					) );
 				?>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+			</nav>
+		</div>
+	</header>
