@@ -49,22 +49,5 @@ if ( ! function_exists( 'rarelyneeded_entry_categories' ) ) :
 				printf( ' - <span class="cat-links">%1$s</span>', $categories_list ); // WPCS: XSS OK.
 			}
 		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'rarelyneeded' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
