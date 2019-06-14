@@ -11,19 +11,11 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
-	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'rarelyneeded' ), 'WordPress' );
-		?></a>
-		<span class="sep"> | </span>
-		<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'rarelyneeded' ), '<a href="https://github.com/anttti/rarelyneeded-wp-theme/">Rarelyneeded</a>' );
-		?>
-	</div><!-- .site-info -->
-</footer><!-- #colophon -->
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			Proudly part of the <a href="https://indieweb.org/">IndieWeb</a> movement 💪
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

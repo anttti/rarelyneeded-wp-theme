@@ -11,6 +11,13 @@ Text Domain: rarelyneeded
 Tags: rarelyneeded
 */
 
+@import "variables";
 @import "normalize";
-@import "theme";
+@import "typography";
+@import "post";
+@import "navigation";
+@import "accessibility";
+@import "alignments";
+@import "widgets";
+@import "misc";
 @import "blocks";

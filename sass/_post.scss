@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+#page {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.site-branding {
+	text-align: center;
+	margin: 60px 0;
+}
+
+.site-footer {
+	padding: 30px;
+	background: var(--color-bg-light);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-align: center;
+	color: var(--color-text-light);
+
+	a {
+		text-decoration: none;
+		color: var(--color-text-light);
+	}
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.post {
+	&:after {
+		content: "";
+		display: block;
+		width: 150px;
+		height: 5px;
+		margin: 80px auto 0 auto;
+		background: var(--color-border);
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 60px 0;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-content > * {
+	margin: 20px auto;
+	max-width: var(--content-width);
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+.entry-content > .alignwide {
+	max-width: 1100px;
+}
+
+.entry-content > .alignfull {
+	margin: 1.5em 0;
+	max-width: 100%;
+}
+
+.entry-content ul,
+.entry-content ol {
+	margin: 1.5em auto;
+	max-width: var(--content-width);
+	list-style-position: outside;
+}
+
+.entry-content li {
+	margin-left: 2.5em;
+	margin-bottom: 6px;
+}
+
+.entry-content ul ul,
+.entry-content ol ol,
+.entry-content ul ol,
+.entry-content ol ul {
+	margin: 0 auto;
+}
+
+.entry-content ul ul li,
+.entry-content ol ol li,
+.entry-content ul ol li,
+.entry-content ol ul li {
+	margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.entry-content > * {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-header,
+.page-header,
+.entry-footer,
+.site-info,
+.post-navigation,
+.page-navigation,
+.not-found .page-content,
+.search .entry-summary {
+	margin: 1.5em auto;
+	padding-left: 14px;
+	padding-right: 14px;
+	max-width: var(--content-width);
+}
+
+.entry-header .wp-post-image {
+	margin-bottom: 1.5em;
+}
+
+.entry-footer span {
+	margin-right: 1em;
+}
+
+.entry-footer {
+	color: #585858;
+	font-size: 90%;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #111;
+}
+
+@media screen and (min-width: 664px) {
+	.entry-header,
+	.page-header,
+	.entry-footer,
+	.site-info,
+	.post-navigation,
+	.page-navigation,
+	.not-found .page-content,
+	.search .entry-summary {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

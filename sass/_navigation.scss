@@ -1,0 +1,149 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a,
+a:visited {
+	color: var(--color-link);
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: var(--color-link-active);
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	max-width: var(--content-width);
+	text-align: center;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+	text-align: left;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+.menu-toggle {
+	padding: 1em;
+}
+
+@media screen and (max-width: 37.5em) {
+	/* Small menu. */
+	.menu-toggle,
+	.main-navigation.toggled ul {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.main-navigation a {
+		padding: 0 0.5em;
+	}
+}
+
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 auto 60px;
+	max-width: var(--content-width);
+	overflow: hidden;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	width: calc(50% - 5px);
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		text-decoration: none;
+		background: var(--color-bg-light);
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+		letter-spacing: 1px;
+		transition: 0.2s all;
+		color: var(--color-text);
+
+		&:hover {
+			background: var(--color-bg-dark);
+		}
+	}
+}
