@@ -31,6 +31,11 @@ h6 {
 .entry-title {
 	margin-bottom: 0.2em;
 	text-align: center;
+
+	a,
+	a:visited {
+		color: var(--color-text);
+	}
 }
 
 .entry-meta {
@@ -39,6 +44,7 @@ h6 {
 	font-weight: bold;
 	font-size: 12px;
 	letter-spacing: 1px;
+	color: var(--color-text-light);
 
 	a,
 	a:visited {
