@@ -126,3 +126,10 @@ ins {
 	word-wrap: break-word;
 	color: #585858;
 }
+
+.wp-block-quote {
+	border-left: 5px solid var(--color-yellow-100);
+	padding-left: 20px;
+	font-style: italic;
+	color: var(--color-text-light);
+}
