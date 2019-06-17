@@ -171,3 +171,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Theme Settings
  */
 require get_template_directory() . '/inc/theme-options.php';
+
+/**
+ * Advanced Custom Fields setup
+ */
+require get_template_directory() . '/inc/advanced-custom-fields.php';

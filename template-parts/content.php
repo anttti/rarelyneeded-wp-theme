@@ -55,7 +55,7 @@
 			) );
 		
 		if ( is_singular() ) :
-			echo( '<p><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">Link to this post on Rarely Needed</a><p>' );
+			echo( '<p class="permalink"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">This post on Rarely Needed</a><p>' );
 		endif;
 		?>
 	</div><!-- .entry-content -->
