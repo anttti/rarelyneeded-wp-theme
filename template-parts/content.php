@@ -13,7 +13,11 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			if ( get_field( 'external_url' ) ) :
+				the_title( '<h1 class="entry-title"><a href="' . get_field( 'external_url' ) . '">🔗 ', '</a></h1>' );
+			else :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			endif;
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			if ( has_post_thumbnail() ) :
@@ -49,6 +53,10 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rarelyneeded' ),
 				'after'  => '</div>',
 			) );
+		
+		if ( is_singular() ) :
+			echo( '<p><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">Link to this post on Rarely Needed</a><p>' );
+		endif;
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
